@@ -83,6 +83,13 @@ read -p "input ObjectsPerBucketPerThread :" ObjectsPerBucketPerThread
 sed -i '197c ObjectsPerBucketPerThread =  '"${ObjectsPerBucketPerThread}"' ' /root/obscmdbench-master/config.dat
 }
 
+function threadsperuser(){
+##并发数
+echo -e "\e[32m 每个用户对应的的并发数 \e[0m"
+read -p "input ThreadsPerUser :" ThreadsPerUser
+sed -i '29c ThreadsPerUser =  '"${ThreadsPerUser}"' ' /root/obscmdbench-master/config.dat
+}
+
 setup () {
 	cat<<-EOF
 ===================================
@@ -96,6 +103,7 @@ setup () {
     7.设置文件大小（字节）
     8.上传的对象数
     9.创建用户文件
+    10.设置用户并发数
 ===================================
 EOF
     read -p "please input a number：" x
@@ -112,6 +120,7 @@ case $x in
 		domainname
 		objectsize
 		objectsperbucketperthread
+        threadsperuser
 	 ;;
     1)
         obs_packeage
@@ -140,6 +149,9 @@ case $x in
      9)
         user
      ;;
+     10)
+        threadsperuser
+     ;;
  
 	*)
         echo "valid responses are load unload install uninstall"
@@ -151,4 +163,5 @@ esac
  
 setup
  echo -e "\e[36m 使用ansibe推送到所有节点主机: ansible -i hosts all -m copy -a 'src=/root/obscmdbench-master dest=/root/'  !!!!!!!! \e[0m"
+ echo -e "\e[36m 使用ansibe推送到所有节点主机: ps -ef |grep run.py|grep -v grep |awk '{print $2}'|xargs -I {} kill -9 {} \e[0m"
  
