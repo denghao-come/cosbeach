@@ -4,7 +4,7 @@
 ##date:2023-1-4
 function obs_packeage(){
 echo "解压obscmdbench安装包到root目录"
-obscmdbenchpag=`find / -name obscmdbench-master.zip`
+obscmdbenchpag=`find /root/ -name obscmdbench-master.zip`
 if test -z "$obscmdbenchpag"; then
 	echo "没有查找到obscmdbench-master.zip安装包，请上传obscmdbench-master.zip安装包"	
 	exit
@@ -15,6 +15,7 @@ else
 	unzip $obscmdbenchpag  -d /root/
 	if [ $? -ne 0 ];then
 	    echo "解压obscmdbench-master.zip文件失败"
+        exit
 	else
 		echo "解压obscmdbench-master.zip文件成功"
 	fi
@@ -149,3 +150,5 @@ esac
 }
  
 setup
+ echo -e "\e[36m 使用ansibe推送到所有节点主机: ansible -i hosts all -m copy -a 'src=/root/obscmdbench-master dest=/root/'  !!!!!!!! \e[0m"
+ 
