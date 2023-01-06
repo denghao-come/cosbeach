@@ -98,7 +98,7 @@ setup () {
 ===================================
 EOF
     read -p "please input a number：" x
-    echo -e "\e[33m 使用ansibe推送到所有节点主机: ansible -i hosts all -m copy -a 'src=/root/obscmdbench-master dest=/root/'  !!!!!!!! \e[0m"
+    echo -e "\e[36m 使用ansibe推送到所有节点主机: ansible -i hosts all -m copy -a 'src=/root/obscmdbench-master dest=/root/'  !!!!!!!! \e[0m"
  
 case $x in
 	0)
