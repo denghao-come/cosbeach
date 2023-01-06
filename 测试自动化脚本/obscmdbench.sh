@@ -1,5 +1,5 @@
 #!/bin/bash
-##install python3.7
+##install obscmdbench
 ##author:denghao
 ##date:2023-1-4
 function obs_packeage(){
