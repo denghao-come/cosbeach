@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="cqwrite_1536k" description="write">
+    <workflow>	
+        <workstage name="cq-_write" closuredelay="0">
+            <work name="cq_write_1" workers="30" totalOps="200000" driver="driver1">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn001;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>			
+            <work name="cq_write_2" workers="30" totalOps="200000" driver="driver2">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn002;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_3" workers="30" totalOps="200000" driver="driver3">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn003;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_4" workers="30" totalOps="200000" driver="driver4">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn004;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>	
+            <work name="cq_write_5" workers="30" totalOps="200000" driver="driver5">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn005;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>		
+            <work name="cq_write_6" workers="30" totalOps="200000" driver="driver6">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn006;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>		
+            <work name="cq_write_7" workers="30" totalOps="200000" driver="driver7">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn007;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>
+            <work name="cq_write_8" workers="30" totalOps="200000" driver="driver8">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn008;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_9" workers="30" totalOps="200000" driver="driver9">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn009;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_10" workers="30" totalOps="200000" driver="driver10">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0010;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_11" workers="30" totalOps="200000" driver="driver11">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0011;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>			
+            <work name="cq_write_12" workers="30" totalOps="200000" driver="driver12">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0012;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_13" workers="30" totalOps="200000" driver="driver13">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0013;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_14" workers="30" totalOps="200000" driver="driver14">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0014;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>	
+            <work name="cq_write_15" workers="30" totalOps="200000" driver="driver15">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0015;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>		
+            <work name="cq_write_16" workers="30" totalOps="200000" driver="driver16">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0016;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>		
+            <work name="cq_write_17" workers="30" totalOps="200000" driver="driver17">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0017;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>
+            <work name="cq_write_18" workers="30" totalOps="200000" driver="driver18">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0018;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_19" workers="30" totalOps="200000" driver="driver19">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0019;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_20" workers="30" totalOps="200000" driver="driver20">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0020;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_21" workers="30" totalOps="200000" driver="driver21">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0021;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>			
+            <work name="cq_write_22" workers="30" totalOps="200000" driver="driver22">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0022;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_23" workers="30" totalOps="200000" driver="driver23">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0023;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_24" workers="30" totalOps="200000" driver="driver24">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0024;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>	
+            <work name="cq_write_25" workers="30" totalOps="200000" driver="driver25">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0025;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>		
+            <work name="cq_write_26" workers="30" totalOps="200000" driver="driver26">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0026;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>		
+            <work name="cq_write_27" workers="30" totalOps="200000" driver="driver27">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0027;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>
+            <work name="cq_write_28" workers="30" totalOps="200000" driver="driver28">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0028;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_29" workers="30" totalOps="200000" driver="driver29">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0029;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_30" workers="30" totalOps="200000" driver="driver30">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0030;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_31" workers="30" totalOps="200000" driver="driver31">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0031;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>			
+            <work name="cq_write_32" workers="30" totalOps="200000" driver="driver32">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0032;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_33" workers="30" totalOps="200000" driver="driver33">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0033;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_34" workers="30" totalOps="200000" driver="driver34">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0034;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>	
+            <work name="cq_write_35" workers="30" totalOps="200000" driver="driver35">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0035;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>		
+            <work name="cq_write_36" workers="30" totalOps="200000" driver="driver36">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0036;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>		
+            <work name="cq_write_37" workers="30" totalOps="200000" driver="driver37">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0037;objects=s(1,200000);sizes=c(1536)KB" />
+            </work>
+            <work name="cq_write_38" workers="30" totalOps="200000" driver="driver38">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0038;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>
+            <work name="cq_write_39" workers="30" totalOps="200000" driver="driver39">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0039;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+            <work name="cq_write_40" workers="30" totalOps="200000" driver="driver40">
+                <storage type="s3" config="accesskey=LUEWB38EPKHDEXBDJ7FY;secretkey=8iWmUAwaA11KlZM7Y91DSVQGWEupldIGyLtFXsrd;endpoint=http://10.51.8.201:80" />
+                <operation type="write" ratio="100" config="cprefix=bucket_0;containers=c(9);oprefix=txstn0030;objects=s(1,200000);sizes=c(1536)KB" />	
+            </work>	
+			</workstage> 
+    </workflow>
+</workload>
