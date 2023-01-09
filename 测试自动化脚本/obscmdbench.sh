@@ -2,6 +2,18 @@
 ##install obscmdbench
 ##author:denghao
 ##date:2023-1-4
+
+##检查网卡的mtu值
+function check_network(){
+    mtu=`ifconfig  eth0 | grep mtu | awk '{print $4}'`
+    if [ mtu != 1500 ];then
+        echo -e "\e[36m eth0网卡的mtu值为$mtu ,mtu值标准为1500 \e[0m"
+        ifconfig eth0 mtu 1500
+    else
+        echo -e "\e[36m eth0网卡的mtu值为$mtu \e[0m"
+    fi 
+}
+
 function obs_packeage(){
 echo "解压obscmdbench安装包到root目录"
 obscmdbenchpag=`find /root/ -name obscmdbench-master.zip`
@@ -91,6 +103,7 @@ sed -i '29c ThreadsPerUser =  '"${ThreadsPerUser}"' ' /root/obscmdbench-master/c
 }
 
 setup () {
+    check_network
 	cat<<-EOF
 ===================================
     0.全部执行
