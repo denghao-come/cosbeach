@@ -52,7 +52,7 @@ def create_session_client(client, args):
           aws_session_token=token
     )
 
-    #在liunx中可以使用下面这行，带超时重连参数的
+    #在liunx中可以使用下面这行，带超时重连参数的。
     #config = boto3.session.Config(connect_timeout=3000000, read_timeout=3000000, retries={'max_attempts': 0}, signature_version="s3")
     #在Windows中使用这个不带参数的代码，上面那个带参数的会报错
     config = boto3.session.Config(signature_version="s3")
