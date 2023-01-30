@@ -3,15 +3,24 @@
 ##date: 2022-12-29
 echo "解压cosbeach安装包到root目录"
 cosbeachpag=`find / -name 0.4.2.c4.zip`
+yum install unzip  wget -y
 if test -z "$cosbeachpag"; then
-	echo "没有查找到0.4.2.c4.zip安装包，请上传0.4.2.c4.zip安装包"	
-	exit
+	echo "没有查找到0.4.2.c4.zip安装包，正在下载0.4.2.c4.zip安装包"		
+	ping www.baidu.com -c 4
+	if [ $? -ne 0 ];then
+	    echo "无法联网"
+		exit
+	else
+		echo "正在下载0.4.2.c4.zip安装包"
+		wget  https://ghproxy.com/https://github.com/intel-cloud/cosbench/releases/download/v0.4.2.c4/0.4.2.c4.zip -P 
+	fi
+	
 else
 	echo "存在安装包在一下路径： $cosbeachpag 并解压到/root/目录"
-	#unzip -zxvf $cosbeachpag -C /root/
 	unzip /root/0.4.2.c4.zip  -d /root/
 	if [ $? -ne 0 ];then
 	    echo "解压0.4.2.c4.zip文件失败"
+		exit
 	else
 		echo "解压0.4.2.c4.zip文件成功"
 	fi
